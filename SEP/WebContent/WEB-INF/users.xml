@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<authors xmlns="http://www.uts.edu.au/SEP"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.uts.edu.au/SEP users.xsd"> 
+	<author id="11433099">
+		<name>Tim Gee</name> 
+		<email>tim@gee.com</email>
+		<password>password</password>
+		<dob>16/11/1990</dob>
+		<biography>Work at this news place</biography>
+	</author>
+	<author id="92933738">
+		<name>John Smith</name>
+		<email>smithy@gmail.com</email>
+		<password>smithyrulz</password>
+		<dob>11/8/1970</dob>
+		<biography>I am smithy</biography>
+	</author>
+	<author id="38392928">
+		<name>Ronald McDonald</name>
+		<email>ron@maccas.com</email>
+		<password>hamberger</password>
+		<dob>11/3/1920</dob>
+		<biography>Eat my food, it's great</biography>
+	</author>
+	<author id="88549237">
+		<name>Ying Octopus</name>
+		<email>ying.octapus@gmail.com</email>
+		<password>squid1963</password>
+		<dob>21/8/1901</dob>
+		<biography>Loves anything to do with squids and octopus</biography>
+	</author>
+</authors>
