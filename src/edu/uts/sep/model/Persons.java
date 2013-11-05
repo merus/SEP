@@ -29,6 +29,27 @@ public class Persons
 
 		return null;
 	}
+	
+	public Person newPerson(String firstname, String lastname, String email, String password)
+	{
+		Person newperson = new Person();
+		
+		newperson.setEmail(email);
+		newperson.setFirstname(firstname);
+		newperson.setLastname(lastname);
+		newperson.setPassword(password);
+		
+		for (Person person : list)
+		{
+			if (newperson.getEmail() == email)
+				return null;
+		}
+		
+		
+		this.list.add(newperson);
+		
+		return newperson;
+	}
 
 	private Person findPerson(int id)
 	{
