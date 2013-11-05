@@ -1,0 +1,213 @@
+@CHARSET "UTF-8";
+
+.error{
+	color:red;
+}
+
+/** BEGIN Main Containers & Headings **/
+#title {
+	text-align: center;
+	font-family: "Georgia", serif;
+	font-size: 36px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#container {
+	width: 75%;
+	margin: 0 auto;
+	background-color: #eeeeee;
+	margin-top: 15px;
+	padding: 10px;
+}
+
+#nav {
+	width: 960px;
+	margin: 0 auto;
+	background-color: #ffffff;
+	text-align: center;
+}
+
+#userstatus {
+	font-size: 12px;
+	text-align: right;
+}
+
+#breadcrumbs {
+	text-align: left;
+	font-size: 12px;
+	margin-top: 10px;
+	font-family: "Georgia", serif;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 960px;
+	margin: 0 auto;
+}
+
+#navlinks {
+	
+}
+
+/**END Main Containers & Headings **/
+
+/** BEGIN Global Formatting **/
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #000000;
+	text-decoration: none;
+}
+
+p {
+	text-align: justify;
+}
+
+hr {
+	width: 80%;
+	color: #b4b4be;
+}
+
+.center {
+	text-align: center;
+}
+/** END Global Formatting **/
+
+/** BEGIN Index Page **/
+.arttitle {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.attributes {
+	font-size: 11px;
+}
+
+.aligntop {
+	vertical-align: top;
+}
+
+.padding {
+	padding:40px;
+}
+
+.readmore {
+	text-align: right;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+/** END Index Page **/
+
+/** BEGIN Article Pages**/
+.authorName {
+	margin-top: -20px;
+	font-weight:bold;
+}
+
+.articleHeading {
+	text-align: center;
+	margin-top: 5px;
+}
+/** END Article Pages **/
+
+/** Authentication Pages **/
+#auth-container {
+	width: 400px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 150px;
+	background-color: #eeeeee;
+}
+
+#auth-error {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color: red;
+	text-align: center;
+}
+/** End Authentication Pages**/
+
+/** BEGIN Buttons**/
+.submit {
+	-moz-box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+	box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #79bbff
+		), color-stop(1, #378de5));
+	background: -moz-linear-gradient(center top, #79bbff 5%, #378de5 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff',
+		endColorstr='#378de5');
+	background-color: #79bbff;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #84bbf3;
+	display: inline-block;
+	color: #ffffff;
+	font-family: arial;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 6px 24px;
+	text-decoration: none;
+	text-shadow: 1px 1px 0px #528ecc;
+}
+
+.submit:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5
+		), color-stop(1, #79bbff));
+	background: -moz-linear-gradient(center top, #378de5 5%, #79bbff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5',
+		endColorstr='#79bbff');
+	background-color: #378de5;
+}
+
+.submit:active {
+	position: relative;
+	top: 1px;
+}
+
+.delete {
+	-moz-box-shadow: inset 0px 1px 0px 0px #f29c93;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #f29c93;
+	box-shadow: inset 0px 1px 0px 0px #f29c93;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fe1a00
+		), color-stop(1, #ce0100));
+	background: -moz-linear-gradient(center top, #fe1a00 5%, #ce0100 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00',
+		endColorstr='#ce0100');
+	background-color: #fe1a00;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #d83526;
+	display: inline-block;
+	color: #ffffff;
+	font-family: arial;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 6px 24px;
+	text-decoration: none;
+	text-shadow: 1px 1px 0px #b23e35;
+}
+
+.delete:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ce0100
+		), color-stop(1, #fe1a00));
+	background: -moz-linear-gradient(center top, #ce0100 5%, #fe1a00 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100',
+		endColorstr='#fe1a00');
+	background-color: #ce0100;
+}
+
+.delete:active {
+	position: relative;
+	top: 1px;
+}
+/** END Buttons **/

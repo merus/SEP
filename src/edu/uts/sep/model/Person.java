@@ -1,14 +1,9 @@
 package edu.uts.sep.model;
 
 import java.util.ArrayList;
-<<<<<<< HEAD
-
 import org.joda.time.LocalDate;
-=======
-import java.util.Calendar;
 import java.util.Random;
 import edu.uts.sep.Generator;
->>>>>>> bb98cff667d82c6dd035ecb02975f0565f4cfa90
 
 public class Person {
 	
@@ -49,13 +44,8 @@ public class Person {
 	
 
 	public Person(int id, String firstname, String lastname, String othernames,
-<<<<<<< HEAD
 			LocalDate dob, Gender gender, ArrayList<Address> addresses,
 			ArrayList<Phone> phoneNumbers, String email, String password_hash,
-=======
-			Calendar dob, Gender gender, ArrayList<Address> addresses,
-			ArrayList<Phone> phoneNumbers, String email, String password,
->>>>>>> bb98cff667d82c6dd035ecb02975f0565f4cfa90
 			String resume_location, ArrayList<Qualification> qualifications,
 			long tfn, String bankName, long bsb, long accountNumber,
 			String accountName, LocalDate joinDate, String emergencyContactName,
