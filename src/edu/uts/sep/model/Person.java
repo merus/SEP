@@ -1,7 +1,11 @@
 package edu.uts.sep.model;
 
 import java.util.ArrayList;
+<<<<<<< HEAD
 import org.joda.time.LocalDate;
+=======
+import java.util.Calendar;
+>>>>>>> 61174877e61bc83b78f7e8d9a113e414465e7fb2
 import java.util.Random;
 import edu.uts.sep.Generator;
 
@@ -44,8 +48,13 @@ public class Person {
 	
 
 	public Person(int id, String firstname, String lastname, String othernames,
+<<<<<<< HEAD
 			LocalDate dob, Gender gender, ArrayList<Address> addresses,
 			ArrayList<Phone> phoneNumbers, String email, String password_hash,
+=======
+			Calendar dob, Gender gender, ArrayList<Address> addresses,
+			ArrayList<Phone> phoneNumbers, String email, String password,
+>>>>>>> 61174877e61bc83b78f7e8d9a113e414465e7fb2
 			String resume_location, ArrayList<Qualification> qualifications,
 			long tfn, String bankName, long bsb, long accountNumber,
 			String accountName, LocalDate joinDate, String emergencyContactName,
@@ -60,7 +69,11 @@ public class Person {
 		this.addresses = addresses;
 		this.phoneNumbers = phoneNumbers;
 		this.email = email;
+<<<<<<< HEAD
 		this.salt = getSalt();
+=======
+		this.salt = createSalt();
+>>>>>>> 61174877e61bc83b78f7e8d9a113e414465e7fb2
 		this.password_hash = Generator.md5Hash(salt, password);
 		this.resume_location = resume_location;
 		this.qualifications = qualifications;
@@ -76,7 +89,11 @@ public class Person {
 	}
 
 
+<<<<<<< HEAD
 	private int getSalt()
+=======
+	private int createSalt()
+>>>>>>> 61174877e61bc83b78f7e8d9a113e414465e7fb2
 	{
 		Random rand = new Random();
 		int salt;
@@ -87,6 +104,14 @@ public class Person {
 		
 		return salt;
 	}
+<<<<<<< HEAD
+=======
+	
+	public int getSalt()
+	{
+		return salt;
+	}
+>>>>>>> 61174877e61bc83b78f7e8d9a113e414465e7fb2
 
 	public int getId() {
 		return id;
