@@ -13,6 +13,23 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+<<<<<<< HEAD
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+	<classpathentry kind="lib" path="lib/joda-time-2.3.jar"/>
+	<classpathentry kind="lib" path="lib/joda-time-2.3-sources.jar"/>
+=======
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+>>>>>>> bb98cff667d82c6dd035ecb02975f0565f4cfa90
+=======
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+>>>>>>> bb98cff667d82c6dd035ecb02975f0565f4cfa90
+=======
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+>>>>>>> 61174877e61bc83b78f7e8d9a113e414465e7fb2
+>>>>>>> origin/matt
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

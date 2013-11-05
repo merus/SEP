@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="edu.uts.sep.model.*"%>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	<link rel="stylesheet" type="text/css" href="style.css" />
+=======
+>>>>>>> origin/matt
 <link rel="stylesheet" type="text/css" href="style.css" />
 
 <%
@@ -42,4 +48,9 @@
 			href="category.jsp?cat=travel">Travel</a>
 	</div>
 	<br />
+<<<<<<< HEAD
 	<!--END Navigation Bar-->
+=======
+	<!--END Navigation Bar-->
+>>>>>>> 61174877e61bc83b78f7e8d9a113e414465e7fb2
+>>>>>>> origin/matt

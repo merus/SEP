@@ -1,7 +1,11 @@
 package edu.uts.sep.model;
 
 import java.util.ArrayList;
+<<<<<<< HEAD
 import java.util.Calendar;
+=======
+import org.joda.time.LocalDate;
+>>>>>>> origin/matt
 import java.util.Random;
 import edu.uts.sep.Generator;
 
@@ -11,7 +15,7 @@ public class Person {
 	private String firstname;
 	private String lastname;
 	private String othernames;
-	private Calendar dob;
+	private LocalDate dob;
 	private Gender gender;
 	private ArrayList<Address> addresses;
 	private ArrayList<Phone> phoneNumbers;
@@ -25,10 +29,11 @@ public class Person {
 	private long bsb;
 	private long accountNumber;
 	private String accountName;
-	private Calendar joinDate;
+	private LocalDate joinDate;
 	private String emergencyContactName;
 	private String emergencyRelation;
 	private ArrayList<Phone> emergencyNumbers;
+	private String faculty;
 	
 
 	
@@ -43,11 +48,15 @@ public class Person {
 	
 
 	public Person(int id, String firstname, String lastname, String othernames,
+<<<<<<< HEAD
 			Calendar dob, Gender gender, ArrayList<Address> addresses,
+=======
+			LocalDate dob, Gender gender, ArrayList<Address> addresses,
+>>>>>>> origin/matt
 			ArrayList<Phone> phoneNumbers, String email, String password,
 			String resume_location, ArrayList<Qualification> qualifications,
 			long tfn, String bankName, long bsb, long accountNumber,
-			String accountName, Calendar joinDate, String emergencyContactName,
+			String accountName, LocalDate joinDate, String emergencyContactName,
 			String emergencyRelation, ArrayList<Phone> emergencyNumbers) {
 		super();
 		this.id = id;
@@ -140,13 +149,13 @@ public class Person {
 
 
 
-	public Calendar getDob() {
+	public LocalDate getDob() {
 		return dob;
 	}
 
 
 
-	public void setDob(Calendar dob) {
+	public void setDob(LocalDate dob) {
 		this.dob = dob;
 	}
 
@@ -260,13 +269,13 @@ public class Person {
 
 
 
-	public Calendar getJoinDate() {
+	public LocalDate getJoinDate() {
 		return joinDate;
 	}
 
 
 
-	public void setJoinDate(Calendar joinDate) {
+	public void setJoinDate(LocalDate joinDate) {
 		this.joinDate = joinDate;
 	}
 
@@ -343,6 +352,20 @@ public class Person {
 	public void deleteEmergencyNumber(Phone phone) {
 		emergencyNumbers.remove(phone);
 	}
+
+	public String getFaculty() {
+		return faculty;
+	}
+
+	public void setFaculty(String faculty) {
+		this.faculty = faculty;
+	}
+	
+	public boolean isFaculty() {
+		return (this.faculty != "");
+	}
+
+
 
 	public enum Gender {
 		Female, Male, Transgender
