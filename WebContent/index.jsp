@@ -1,6 +1,19 @@
 <%@ include file="header.jsp"%> 
 <html>
 <head>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ba09fe7d5cb4c440ae980e793f205b9abc5da91b
+<!-- CARLIN... FUCK YEAH! -->
+	
+	
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Home</title>
+
+</head>
+<body>
+=======
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Home</title>
 <<<<<<< HEAD
@@ -16,10 +29,14 @@
 
 </head>
 <body>
+<<<<<<< HEAD
+=======
 >>>>>>> 61174877e61bc83b78f7e8d9a113e414465e7fb2
+>>>>>>> origin/matt
 	<div id="breadcrumbs">You are here: Home</div>
 	<!-- Print out the short text of the articles.  With the most recently created at the top -->
 	<div id="container">
 	</div>
 </body>
+>>>>>>> ba09fe7d5cb4c440ae980e793f205b9abc5da91b
 </html>

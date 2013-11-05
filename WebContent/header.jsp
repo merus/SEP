@@ -3,7 +3,14 @@
 <<<<<<< HEAD
 	<link rel="stylesheet" type="text/css" href="style.css" />
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	<link rel="stylesheet" type="text/css" href="style.css" />
+=======
+>>>>>>> origin/matt
 <link rel="stylesheet" type="text/css" href="style.css" />
+>>>>>>> ba09fe7d5cb4c440ae980e793f205b9abc5da91b
 
 <%
 	session.setAttribute("s", "HELLO");
@@ -45,5 +52,14 @@
 			href="category.jsp?cat=travel">Travel</a>
 	</div>
 	<br />
+<<<<<<< HEAD
+
+	<!--END Navigation Bar-->
+=======
+<<<<<<< HEAD
+	<!--END Navigation Bar-->
+=======
 	<!--END Navigation Bar-->
 >>>>>>> 61174877e61bc83b78f7e8d9a113e414465e7fb2
+>>>>>>> origin/matt
+>>>>>>> ba09fe7d5cb4c440ae980e793f205b9abc5da91b
