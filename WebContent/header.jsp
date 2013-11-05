@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="edu.uts.sep.model.*"%>
-<link rel="stylesheet" type="text/css" href="style.css" />
 
-
+	<link rel="stylesheet" type="text/css" href="style.css" />
 <%
 	session.setAttribute("s", "HELLO");
 	String s = (String) session.getAttribute("s");
@@ -43,4 +42,4 @@
 			href="category.jsp?cat=travel">Travel</a>
 	</div>
 	<br />
-</div>
+	<!--END Navigation Bar-->
