@@ -2,16 +2,17 @@
 <%
 	String id = request.getParameter("id");
 	String password = request.getParameter("password");
-	String person = null;// = XXX.login(id, password);
+	
+	boolean login = true;
 
-	if (person == null)
+	if (login)
 	{
-		session.setAttribute("login", "Login Credentials Incorrect");
-		response.sendRedirect("login.jsp");
+		session.setAttribute("user", id);
+		response.sendRedirect("index.jsp");
 	}
 	else
 	{
-		session.setAttribute("Person", person);
-		response.sendRedirect("index.jsp");
+		session.setAttribute("login", "Login Credentials Incorrect");
+		response.sendRedirect("login.jsp");
 	}
 %>

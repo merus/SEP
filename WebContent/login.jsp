@@ -5,12 +5,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Login</title>
 <%
-	String error = (String) session.getAttribute("login");
+	String loginFail = (String) session.getAttribute("login");
 %>
 </head>
 <body>
 	<div id="breadcrumbs">
 		You are here: <a href="index.jsp">Home</a> > <i>Login</i>
+		<%@ include file="loginbar.jsp"%>
 	</div>
 	<div id="auth-container">
 		<br />
@@ -33,7 +34,7 @@
 					<tr>
 						<td colspan="2" class="error">
 							<%
-								if(error != null)
+								if(loginFail != null)
 								{
 									out.print(error);
 									session.removeAttribute("login");
