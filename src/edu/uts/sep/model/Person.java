@@ -59,7 +59,7 @@ public class Person {
 		this.addresses = addresses;
 		this.phoneNumbers = phoneNumbers;
 		this.email = email;
-		this.salt = getSalt();
+		this.salt = createSalt();
 		this.password_hash = Generator.md5Hash(salt, password);
 		this.resume_location = resume_location;
 		this.qualifications = qualifications;
@@ -75,7 +75,7 @@ public class Person {
 	}
 
 
-	private int getSalt()
+	private int createSalt()
 	{
 		Random rand = new Random();
 		int salt;
@@ -84,6 +84,11 @@ public class Person {
 			salt = rand.nextInt(100);
 		} while(salt < 10);
 		
+		return salt;
+	}
+	
+	public int getSalt()
+	{
 		return salt;
 	}
 
