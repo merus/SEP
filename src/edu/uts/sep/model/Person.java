@@ -1,7 +1,14 @@
 package edu.uts.sep.model;
 
 import java.util.ArrayList;
+<<<<<<< HEAD
+
+import org.joda.time.LocalDate;
+=======
 import java.util.Calendar;
+import java.util.Random;
+import edu.uts.sep.Generator;
+>>>>>>> bb98cff667d82c6dd035ecb02975f0565f4cfa90
 
 public class Person {
 	
@@ -9,11 +16,12 @@ public class Person {
 	private String firstname;
 	private String lastname;
 	private String othernames;
-	private Calendar dob;
+	private LocalDate dob;
 	private Gender gender;
 	private ArrayList<Address> addresses;
 	private ArrayList<Phone> phoneNumbers;
 	private String email;
+	private int salt;
 	private String password_hash;
 	private String resume_location;
 	private ArrayList<Qualification> qualifications;
@@ -22,10 +30,11 @@ public class Person {
 	private long bsb;
 	private long accountNumber;
 	private String accountName;
-	private Calendar joinDate;
+	private LocalDate joinDate;
 	private String emergencyContactName;
 	private String emergencyRelation;
 	private ArrayList<Phone> emergencyNumbers;
+	private String faculty;
 	
 
 	
@@ -40,11 +49,16 @@ public class Person {
 	
 
 	public Person(int id, String firstname, String lastname, String othernames,
-			Calendar dob, Gender gender, ArrayList<Address> addresses,
+<<<<<<< HEAD
+			LocalDate dob, Gender gender, ArrayList<Address> addresses,
 			ArrayList<Phone> phoneNumbers, String email, String password_hash,
+=======
+			Calendar dob, Gender gender, ArrayList<Address> addresses,
+			ArrayList<Phone> phoneNumbers, String email, String password,
+>>>>>>> bb98cff667d82c6dd035ecb02975f0565f4cfa90
 			String resume_location, ArrayList<Qualification> qualifications,
 			long tfn, String bankName, long bsb, long accountNumber,
-			String accountName, Calendar joinDate, String emergencyContactName,
+			String accountName, LocalDate joinDate, String emergencyContactName,
 			String emergencyRelation, ArrayList<Phone> emergencyNumbers) {
 		super();
 		this.id = id;
@@ -56,7 +70,8 @@ public class Person {
 		this.addresses = addresses;
 		this.phoneNumbers = phoneNumbers;
 		this.email = email;
-		this.password_hash = password_hash;
+		this.salt = getSalt();
+		this.password_hash = Generator.md5Hash(salt, password);
 		this.resume_location = resume_location;
 		this.qualifications = qualifications;
 		this.tfn = tfn;
@@ -71,6 +86,17 @@ public class Person {
 	}
 
 
+	private int getSalt()
+	{
+		Random rand = new Random();
+		int salt;
+		
+		do{
+			salt = rand.nextInt(100);
+		} while(salt < 10);
+		
+		return salt;
+	}
 
 	public int getId() {
 		return id;
@@ -120,13 +146,13 @@ public class Person {
 
 
 
-	public Calendar getDob() {
+	public LocalDate getDob() {
 		return dob;
 	}
 
 
 
-	public void setDob(Calendar dob) {
+	public void setDob(LocalDate dob) {
 		this.dob = dob;
 	}
 
@@ -162,8 +188,8 @@ public class Person {
 
 
 
-	public void setPassword_hash(String password_hash) {
-		this.password_hash = password_hash;
+	public void setPassword(String newPassword) {
+		this.password_hash = Generator.md5Hash(salt, newPassword);
 	}
 
 
@@ -240,13 +266,13 @@ public class Person {
 
 
 
-	public Calendar getJoinDate() {
+	public LocalDate getJoinDate() {
 		return joinDate;
 	}
 
 
 
-	public void setJoinDate(Calendar joinDate) {
+	public void setJoinDate(LocalDate joinDate) {
 		this.joinDate = joinDate;
 	}
 
@@ -323,6 +349,20 @@ public class Person {
 	public void deleteEmergencyNumber(Phone phone) {
 		emergencyNumbers.remove(phone);
 	}
+
+	public String getFaculty() {
+		return faculty;
+	}
+
+	public void setFaculty(String faculty) {
+		this.faculty = faculty;
+	}
+	
+	public boolean isFaculty() {
+		return (this.faculty != "");
+	}
+
+
 
 	public enum Gender {
 		Female, Male, Transgender
