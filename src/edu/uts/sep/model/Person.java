@@ -2,6 +2,8 @@ package edu.uts.sep.model;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Random;
+import edu.uts.sep.Generator;
 
 public class Person {
 	
@@ -14,6 +16,7 @@ public class Person {
 	private ArrayList<Address> addresses;
 	private ArrayList<Phone> phoneNumbers;
 	private String email;
+	private int salt;
 	private String password_hash;
 	private String resume_location;
 	private ArrayList<Qualification> qualifications;
@@ -41,7 +44,7 @@ public class Person {
 
 	public Person(int id, String firstname, String lastname, String othernames,
 			Calendar dob, Gender gender, ArrayList<Address> addresses,
-			ArrayList<Phone> phoneNumbers, String email, String password_hash,
+			ArrayList<Phone> phoneNumbers, String email, String password,
 			String resume_location, ArrayList<Qualification> qualifications,
 			long tfn, String bankName, long bsb, long accountNumber,
 			String accountName, Calendar joinDate, String emergencyContactName,
@@ -56,7 +59,8 @@ public class Person {
 		this.addresses = addresses;
 		this.phoneNumbers = phoneNumbers;
 		this.email = email;
-		this.password_hash = password_hash;
+		this.salt = getSalt();
+		this.password_hash = Generator.md5Hash(salt, password);
 		this.resume_location = resume_location;
 		this.qualifications = qualifications;
 		this.tfn = tfn;
@@ -71,6 +75,17 @@ public class Person {
 	}
 
 
+	private int getSalt()
+	{
+		Random rand = new Random();
+		int salt;
+		
+		do{
+			salt = rand.nextInt(100);
+		} while(salt < 10);
+		
+		return salt;
+	}
 
 	public int getId() {
 		return id;
@@ -162,8 +177,8 @@ public class Person {
 
 
 
-	public void setPassword_hash(String password_hash) {
-		this.password_hash = password_hash;
+	public void setPassword(String newPassword) {
+		this.password_hash = Generator.md5Hash(salt, newPassword);
 	}
 
 
